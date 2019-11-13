@@ -9,17 +9,10 @@ pipeline {
             }
         }
 
-        stage ('Testing Stage') {
+        stage ('Package Stage') {
 
             steps {
-                    sh 'mvn test'
-            }
-        }
-
-
-        stage ('Deployment Stage') {
-            steps {
-                    sh 'mvn deploy'
+                    sh 'mvn Package'
             }
         }
     }
